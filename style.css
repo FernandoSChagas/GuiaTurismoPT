@@ -20,8 +20,8 @@ body {
 }
 
 header {
-    /* AQUI ESTÁ A ÚNICA ALTERAÇÃO: o nome da imagem no url() */
-    background: linear-gradient(rgba(45, 55, 72, 0.6), rgba(45, 55, 72, 0.6)), url('header-turismo.jpg') no-repeat center center;
+    /* A CORREÇÃO FINAL ESTÁ AQUI: O nome do ficheiro está agora 100% correto */
+    background: linear-gradient(rgba(45, 55, 72, 0.6), rgba(45, 55, 72, 0.6)), url('header-portugal.PNG') no-repeat center center;
     background-size: cover;
     color: var(--cor-branco);
     text-align: center;
