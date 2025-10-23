@@ -20,7 +20,6 @@ body {
 }
 
 header {
-    /* A CORREÇÃO FINAL ESTÁ AQUI: O nome do ficheiro está agora 100% correto */
     background: linear-gradient(rgba(45, 55, 72, 0.6), rgba(45, 55, 72, 0.6)), url('header-portugal.PNG') no-repeat center center;
     background-size: cover;
     color: var(--cor-branco);
@@ -63,7 +62,7 @@ header p {
 }
 
 .main-container {
-    max-width: 900px; /* Reduzido para consistência com as páginas de conteúdo */
+    max-width: 900px;
     margin: 40px auto;
     padding: 0 20px;
 }
@@ -124,6 +123,37 @@ header p {
     color: var(--cor-principal);
     margin-top: 0;
 }
+
+
+/* === CÓDIGO NOVO PARA A PÁGINA DE SABORES === */
+.prato-item {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e2e8f0;
+}
+.prato-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+.prato-item img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 12px;
+    flex-shrink: 0;
+}
+.prato-item h3 {
+    margin: 0 0 5px 0;
+    font-size: 1.4rem;
+}
+.prato-item p {
+    margin: 0;
+}
+/* === FIM DO CÓDIGO NOVO === */
+
 
 footer {
     text-align: center;
@@ -198,5 +228,15 @@ footer h3 {
     .whatsapp-button {
         padding: 10px 15px;
         font-size: 0.9rem;
+    }
+
+    /* === CÓDIGO NOVO RESPONSIVO === */
+    .prato-item {
+        flex-direction: column; /* Coloca a imagem em cima do texto */
+        align-items: flex-start;
+    }
+    .prato-item img {
+        width: 100%; /* Imagem ocupa a largura toda */
+        height: 200px;
     }
 }
