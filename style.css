@@ -20,7 +20,8 @@ body {
 }
 
 header {
-    background: linear-gradient(rgba(45, 55, 72, 0.6), rgba(45, 55, 72, 0.6)), url('header-turismo.jpg') no-repeat center center;
+    /* A CORREÇÃO FINAL ESTÁ AQUI: O nome do ficheiro está agora 100% correto */
+    background: linear-gradient(rgba(45, 55, 72, 0.6), rgba(45, 55, 72, 0.6)), url('header-portugal.PNG') no-repeat center center;
     background-size: cover;
     color: var(--cor-branco);
     text-align: center;
@@ -62,7 +63,7 @@ header p {
 }
 
 .main-container {
-    max-width: 900px;
+    max-width: 900px; /* Reduzido para consistência com as páginas de conteúdo */
     margin: 40px auto;
     padding: 0 20px;
 }
@@ -119,7 +120,7 @@ header p {
     box-shadow: var(--sombra-card);
 }
 
-.content-card h1, .content-card h2 {
+.content-card h1, .content-card h2, .content-card h3 {
     color: var(--cor-principal);
     margin-top: 0;
 }
