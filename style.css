@@ -124,11 +124,10 @@ header p {
     margin-top: 0;
 }
 
-
-/* === CÓDIGO ATUALIZADO PARA A PÁGINA DE SABORES === */
+/* Estilo para página de Sabores (imagens circulares) */
 .prato-item {
     display: flex;
-    gap: 25px; /* Aumentei o espaço */
+    gap: 25px;
     align-items: center;
     margin-bottom: 30px;
     padding-bottom: 20px;
@@ -139,21 +138,46 @@ header p {
     margin-bottom: 0;
 }
 .prato-item img {
-    /* ALTERAÇÕES AQUI */
     width: 120px;
     height: 120px;
     object-fit: cover;
-    border-radius: 50%; /* Isto cria o círculo */
+    border-radius: 50%;
     flex-shrink: 0;
 }
-.prato-item h3 {
-    margin: 0 0 5px 0;
-    font-size: 1.4rem;
+.prato-item h3 { margin: 0 0 5px 0; font-size: 1.4rem; }
+.prato-item p { margin: 0; }
+
+
+/* === NOVO LAYOUT PARA PÁGINA DE PRAIAS E LOCAIS === */
+.local-item {
+    background-color: var(--cor-branco);
+    border-radius: 12px;
+    margin-bottom: 40px;
+    box-shadow: var(--sombra-card);
+    overflow: hidden; /* Garante que a imagem respeita os cantos arredondados */
+    transition: all 0.3s ease;
 }
-.prato-item p {
+.local-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+.local-item img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+}
+.local-item .local-info {
+    padding: 25px;
+}
+.local-item h3 {
+    margin: 0 0 10px 0;
+    font-size: 1.6rem;
+}
+.local-item p {
     margin: 0;
 }
-/* === FIM DO CÓDIGO ATUALIZADO === */
+/* === FIM DO NOVO LAYOUT === */
 
 
 footer {
@@ -164,32 +188,12 @@ footer {
     color: rgba(255, 255, 255, 0.8);
     border-top: 4px solid var(--cor-acento);
 }
+.footer-container { max-width: 800px; margin: 0 auto; }
+footer h3 { font-size: 1.5rem; font-weight: 600; color: var(--cor-branco); margin: 0 0 10px 0; }
+.footer-description { font-size: 0.95rem; margin-bottom: 25px; line-height: 1.6; }
+.footer-copyright { margin-top: 30px; font-size: 0.85rem; opacity: 0.7; }
 
-.footer-container { 
-    max-width: 800px; 
-    margin: 0 auto; 
-}
-
-footer h3 { 
-    font-size: 1.5rem; 
-    font-weight: 600; 
-    color: var(--cor-branco); 
-    margin: 0 0 10px 0; 
-}
-
-.footer-description { 
-    font-size: 0.95rem; 
-    margin-bottom: 25px; 
-    line-height: 1.6; 
-}
-
-.footer-copyright { 
-    margin-top: 30px; 
-    font-size: 0.85rem; 
-    opacity: 0.7; 
-}
-
-/* Estilos para o Botão Flutuante do WhatsApp (VERSÃO SÓ TEXTO) */
+/* Estilos do Botão WhatsApp */
 .whatsapp-button {
     position: fixed;
     bottom: 25px;
@@ -205,7 +209,6 @@ footer h3 {
     font-size: 1rem;
     transition: all 0.3s ease;
 }
-
 .whatsapp-button:hover {
     transform: translateY(-3px);
     box-shadow: 0 6px 15px rgba(0,0,0,0.3);
@@ -213,32 +216,20 @@ footer h3 {
 
 /* Regras de Responsividade */
 @media (max-width: 768px) {
-    header { 
-        padding: 60px 15px; 
-    }
-    header h1 { 
-        font-size: 2.5rem; 
-    }
-    .main-container { 
-        margin-top: 25px; 
-        padding: 0 15px; 
-    }
-    .content-card {
-        padding: 20px;
-    }
-    .whatsapp-button {
-        padding: 10px 15px;
-        font-size: 0.9rem;
-    }
+    header { padding: 60px 15px; }
+    header h1 { font-size: 2.5rem; }
+    .main-container { margin-top: 25px; padding: 0 15px; }
+    .content-card { padding: 20px; }
+    .whatsapp-button { padding: 10px 15px; font-size: 0.9rem; }
 
-    /* === CÓDIGO RESPONSIVO ATUALIZADO === */
+    /* Responsividade para página de Sabores */
     .prato-item {
-        flex-direction: column; /* Coloca a imagem em cima do texto */
-        align-items: center; /* Centra a imagem */
-        text-align: center; /* Centra o texto */
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
-    .prato-item img {
-        width: 120px; /* Mantém o tamanho circular */
-        height: 120px;
-    }
+    .prato-item img { width: 120px; height: 120px; }
+
+    /* Responsividade para página de Praias */
+    .local-item img { height: 250px; }
 }
