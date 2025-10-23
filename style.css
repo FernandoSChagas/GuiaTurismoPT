@@ -125,10 +125,10 @@ header p {
 }
 
 
-/* === CÓDIGO NOVO PARA A PÁGINA DE SABORES === */
+/* === CÓDIGO ATUALIZADO PARA A PÁGINA DE SABORES === */
 .prato-item {
     display: flex;
-    gap: 20px;
+    gap: 25px; /* Aumentei o espaço */
     align-items: center;
     margin-bottom: 30px;
     padding-bottom: 20px;
@@ -139,10 +139,11 @@ header p {
     margin-bottom: 0;
 }
 .prato-item img {
-    width: 150px;
-    height: 150px;
+    /* ALTERAÇÕES AQUI */
+    width: 120px;
+    height: 120px;
     object-fit: cover;
-    border-radius: 12px;
+    border-radius: 50%; /* Isto cria o círculo */
     flex-shrink: 0;
 }
 .prato-item h3 {
@@ -152,7 +153,7 @@ header p {
 .prato-item p {
     margin: 0;
 }
-/* === FIM DO CÓDIGO NOVO === */
+/* === FIM DO CÓDIGO ATUALIZADO === */
 
 
 footer {
@@ -230,13 +231,14 @@ footer h3 {
         font-size: 0.9rem;
     }
 
-    /* === CÓDIGO NOVO RESPONSIVO === */
+    /* === CÓDIGO RESPONSIVO ATUALIZADO === */
     .prato-item {
         flex-direction: column; /* Coloca a imagem em cima do texto */
-        align-items: flex-start;
+        align-items: center; /* Centra a imagem */
+        text-align: center; /* Centra o texto */
     }
     .prato-item img {
-        width: 100%; /* Imagem ocupa a largura toda */
-        height: 200px;
+        width: 120px; /* Mantém o tamanho circular */
+        height: 120px;
     }
 }
