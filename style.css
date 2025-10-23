@@ -148,13 +148,13 @@ header p {
 .prato-item p { margin: 0; }
 
 
-/* === NOVO LAYOUT PARA PÁGINA DE PRAIAS E LOCAIS === */
+/* Estilo para página de Praias e Locais */
 .local-item {
     background-color: var(--cor-branco);
     border-radius: 12px;
     margin-bottom: 40px;
     box-shadow: var(--sombra-card);
-    overflow: hidden; /* Garante que a imagem respeita os cantos arredondados */
+    overflow: hidden;
     transition: all 0.3s ease;
 }
 .local-item:hover {
@@ -167,17 +167,28 @@ header p {
     object-fit: cover;
     display: block;
 }
-.local-item .local-info {
-    padding: 25px;
+.local-item .local-info { padding: 25px; }
+.local-item h3 { margin: 0 0 10px 0; font-size: 1.6rem; }
+.local-item p { margin: 0; }
+
+
+/* === CÓDIGO NOVO E CORRIGIDO PARA O TOPO DAS PÁGINAS === */
+.hero-image {
+    height: 40vh;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--cor-branco);
+    text-align: center;
 }
-.local-item h3 {
-    margin: 0 0 10px 0;
-    font-size: 1.6rem;
+.hero-text {
+    font-size: 3rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
 }
-.local-item p {
-    margin: 0;
-}
-/* === FIM DO NOVO LAYOUT === */
 
 
 footer {
@@ -232,4 +243,8 @@ footer h3 { font-size: 1.5rem; font-weight: 600; color: var(--cor-branco); margi
 
     /* Responsividade para página de Praias */
     .local-item img { height: 250px; }
+    
+    /* Responsividade para o topo das páginas com imagem */
+    .hero-image { height: 30vh; }
+    .hero-text { font-size: 2.2rem; }
 }
