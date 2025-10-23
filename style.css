@@ -20,8 +20,7 @@ body {
 }
 
 header {
-    /* A CORREÇÃO FINAL ESTÁ AQUI: O nome do ficheiro está agora 100% correto */
-    background: linear-gradient(rgba(45, 55, 72, 0.6), rgba(45, 55, 72, 0.6)), url('header-portugal.PNG') no-repeat center center;
+    background: linear-gradient(rgba(45, 55, 72, 0.6), rgba(45, 55, 72, 0.6)), url('header-turismo.jpg') no-repeat center center;
     background-size: cover;
     color: var(--cor-branco);
     text-align: center;
@@ -43,8 +42,27 @@ header p {
     margin-right: auto;
 }
 
+.navbar {
+    background-color: var(--cor-branco);
+    padding: 15px 20px;
+    box-shadow: var(--sombra-card);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar a.home-link {
+    color: var(--cor-principal);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
 .main-container {
-    max-width: 1100px;
+    max-width: 900px;
     margin: 40px auto;
     padding: 0 20px;
 }
@@ -93,6 +111,19 @@ header p {
     flex-grow: 1;
 }
 
+.content-card {
+    background-color: var(--cor-branco);
+    border-radius: 12px;
+    padding: 30px;
+    margin-bottom: 30px;
+    box-shadow: var(--sombra-card);
+}
+
+.content-card h1, .content-card h2 {
+    color: var(--cor-principal);
+    margin-top: 0;
+}
+
 footer {
     text-align: center;
     padding: 40px 20px;
@@ -126,6 +157,28 @@ footer h3 {
     opacity: 0.7; 
 }
 
+/* Estilos para o Botão Flutuante do WhatsApp (VERSÃO SÓ TEXTO) */
+.whatsapp-button {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background-color: #25D366;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 30px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    z-index: 1001;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.whatsapp-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+}
+
 /* Regras de Responsividade */
 @media (max-width: 768px) {
     header { 
@@ -137,5 +190,12 @@ footer h3 {
     .main-container { 
         margin-top: 25px; 
         padding: 0 15px; 
+    }
+    .content-card {
+        padding: 20px;
+    }
+    .whatsapp-button {
+        padding: 10px 15px;
+        font-size: 0.9rem;
     }
 }
