@@ -1,7 +1,7 @@
 :root {
     --cor-principal: #2d3748;
     --cor-secundaria: #4a5568;
-    --cor-acento: #D97706; /* NOVA COR: Um tom quente, cor de açafrão/dourado, para turismo e gastronomia */
+    --cor-acento: #D97706;
     --cor-fundo: #f9fafb;
     --cor-branco: #ffffff;
     --sombra-card: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
@@ -27,20 +27,8 @@ header {
     padding: 80px 20px;
 }
 
-header h1 {
-    margin: 0;
-    font-size: 3rem;
-    font-weight: 700;
-}
-
-header p {
-    font-size: 1.2rem;
-    opacity: 0.9;
-    margin-top: 10px;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-}
+header h1 { margin: 0; font-size: 3rem; font-weight: 700; }
+header p { font-size: 1.2rem; opacity: 0.9; margin-top: 10px; max-width: 600px; margin-left: auto; margin-right: auto; }
 
 .navbar {
     background-color: var(--cor-branco);
@@ -54,24 +42,11 @@ header p {
     align-items: center;
 }
 
-.navbar a.home-link {
-    color: var(--cor-principal);
-    text-decoration: none;
-    font-weight: 700;
-    font-size: 1.2rem;
-}
+.navbar a.home-link { color: var(--cor-principal); text-decoration: none; font-weight: 700; font-size: 1.2rem; }
 
-.main-container {
-    max-width: 900px;
-    margin: 40px auto;
-    padding: 0 20px;
-}
+.main-container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
 
-.section-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 25px;
-}
+.section-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; }
 
 .section-card {
     background-color: var(--cor-branco);
@@ -92,24 +67,9 @@ header p {
     border-bottom-color: var(--cor-acento);
 }
 
-.section-card svg {
-    width: 48px;
-    height: 48px;
-    fill: var(--cor-acento);
-    margin-bottom: 15px;
-}
-
-.section-card h2 {
-    font-size: 1.5rem;
-    color: var(--cor-principal);
-    margin: 0 0 10px 0;
-}
-
-.section-card p {
-    font-size: 0.95rem;
-    margin: 0;
-    flex-grow: 1;
-}
+.section-card svg { width: 48px; height: 48px; fill: var(--cor-acento); margin-bottom: 15px; }
+.section-card h2 { font-size: 1.5rem; color: var(--cor-principal); margin: 0 0 10px 0; }
+.section-card p { font-size: 0.95rem; margin: 0; flex-grow: 1; }
 
 .content-card {
     background-color: var(--cor-branco);
@@ -119,111 +79,71 @@ header p {
     box-shadow: var(--sombra-card);
 }
 
-.content-card h1, .content-card h2, .content-card h3 {
-    color: var(--cor-principal);
-    margin-top: 0;
-}
+.content-card h1, .content-card h2, .content-card h3 { color: var(--cor-principal); margin-top: 0; }
 
 /* Estilo para página de Sabores (imagens circulares) */
-.prato-item {
-    display: flex;
-    gap: 25px;
-    align-items: center;
-    margin-bottom: 30px;
-    padding-bottom: 20px;
-    border-bottom: 1px solid #e2e8f0;
-}
-.prato-item:last-child {
-    border-bottom: none;
-    margin-bottom: 0;
-}
-.prato-item img {
-    width: 120px;
-    height: 120px;
-    object-fit: cover;
-    border-radius: 50%;
-    flex-shrink: 0;
-}
+.prato-item { display: flex; gap: 25px; align-items: center; margin-bottom: 30px; padding-bottom: 20px; border-bottom: 1px solid #e2e8f0; }
+.prato-item:last-child { border-bottom: none; margin-bottom: 0; }
+.prato-item img { width: 120px; height: 120px; object-fit: cover; border-radius: 50%; flex-shrink: 0; }
 .prato-item h3 { margin: 0 0 5px 0; font-size: 1.4rem; }
 .prato-item p { margin: 0; }
 
-
 /* Estilo para página de Praias e Locais */
-.local-item {
-    background-color: var(--cor-branco);
-    border-radius: 12px;
-    margin-bottom: 40px;
-    box-shadow: var(--sombra-card);
-    overflow: hidden;
-    transition: all 0.3s ease;
-}
-.local-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-}
-.local-item img {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-    display: block;
-}
+.local-item { background-color: var(--cor-branco); border-radius: 12px; margin-bottom: 40px; box-shadow: var(--sombra-card); overflow: hidden; transition: all 0.3s ease; }
+.local-item:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+.local-item img { width: 100%; height: 300px; object-fit: cover; display: block; }
 .local-item .local-info { padding: 25px; }
 .local-item h3 { margin: 0 0 10px 0; font-size: 1.6rem; }
 .local-item p { margin: 0; }
 
+/* Estilo para topo de página com imagem */
+.hero-image { height: 40vh; background-size: cover; background-position: center; position: relative; display: flex; justify-content: center; align-items: center; color: var(--cor-branco); text-align: center; }
+.hero-text { font-size: 3rem; font-weight: 700; text-shadow: 2px 2px 8px rgba(0,0,0,0.7); }
 
-/* === CÓDIGO NOVO E CORRIGIDO PARA O TOPO DAS PÁGINAS === */
-.hero-image {
-    height: 40vh;
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: var(--cor-branco);
-    text-align: center;
+/* === NOVO LAYOUT PARA PÁGINA DE VINHOS === */
+.vinho-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
 }
-.hero-text {
-    font-size: 3rem;
-    font-weight: 700;
-    text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+.vinho-card {
+    background-color: var(--cor-branco);
+    border-radius: 12px;
+    box-shadow: var(--sombra-card);
+    overflow: hidden;
+    transition: all 0.3s ease;
 }
+.vinho-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+.vinho-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+.vinho-card .vinho-info {
+    padding: 20px;
+}
+.vinho-card h3 {
+    margin: 0 0 10px 0;
+    font-size: 1.4rem;
+}
+.vinho-card p {
+    font-size: 0.95rem;
+    margin: 0;
+}
+/* === FIM DO NOVO LAYOUT === */
 
-
-footer {
-    text-align: center;
-    padding: 40px 20px;
-    margin-top: 50px;
-    background-color: var(--cor-principal);
-    color: rgba(255, 255, 255, 0.8);
-    border-top: 4px solid var(--cor-acento);
-}
+footer { text-align: center; padding: 40px 20px; margin-top: 50px; background-color: var(--cor-principal); color: rgba(255, 255, 255, 0.8); border-top: 4px solid var(--cor-acento); }
 .footer-container { max-width: 800px; margin: 0 auto; }
 footer h3 { font-size: 1.5rem; font-weight: 600; color: var(--cor-branco); margin: 0 0 10px 0; }
 .footer-description { font-size: 0.95rem; margin-bottom: 25px; line-height: 1.6; }
 .footer-copyright { margin-top: 30px; font-size: 0.85rem; opacity: 0.7; }
 
 /* Estilos do Botão WhatsApp */
-.whatsapp-button {
-    position: fixed;
-    bottom: 25px;
-    right: 25px;
-    background-color: #25D366;
-    color: white;
-    padding: 12px 20px;
-    border-radius: 30px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-    z-index: 1001;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 1rem;
-    transition: all 0.3s ease;
-}
-.whatsapp-button:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 15px rgba(0,0,0,0.3);
-}
+.whatsapp-button { position: fixed; bottom: 25px; right: 25px; background-color: #25D366; color: white; padding: 12px 20px; border-radius: 30px; box-shadow: 0 4px 12px rgba(0,0,0,0.2); z-index: 1001; text-decoration: none; font-weight: 600; font-size: 1rem; transition: all 0.3s ease; }
+.whatsapp-button:hover { transform: translateY(-3px); box-shadow: 0 6px 15px rgba(0,0,0,0.3); }
 
 /* Regras de Responsividade */
 @media (max-width: 768px) {
@@ -232,19 +152,9 @@ footer h3 { font-size: 1.5rem; font-weight: 600; color: var(--cor-branco); margi
     .main-container { margin-top: 25px; padding: 0 15px; }
     .content-card { padding: 20px; }
     .whatsapp-button { padding: 10px 15px; font-size: 0.9rem; }
-
-    /* Responsividade para página de Sabores */
-    .prato-item {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
+    .prato-item { flex-direction: column; align-items: center; text-align: center; }
     .prato-item img { width: 120px; height: 120px; }
-
-    /* Responsividade para página de Praias */
     .local-item img { height: 250px; }
-    
-    /* Responsividade para o topo das páginas com imagem */
     .hero-image { height: 30vh; }
     .hero-text { font-size: 2.2rem; }
 }
