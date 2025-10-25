@@ -112,7 +112,7 @@ header p {
 .prato-item p { margin: 0; }
 
 
-/* ESTILOS DO RODAPÉ (INCLUINDO O LINK AGORA CORRIGIDO) */
+/* ESTILOS DO RODAPÉ */
 footer {
     text-align: center;
     padding: 40px 20px;
@@ -124,7 +124,7 @@ footer {
 .footer-container { max-width: 800px; margin: 0 auto; }
 .footer-links { margin-top: 15px; margin-bottom: 10px; } 
 .footer-links a { 
-    color: var(--cor-branco); /* CORRIGIDO: Garante que o link é branco */
+    color: var(--cor-branco);
     text-decoration: none; 
     margin: 0 10px; 
     transition: color 0.3s ease; 
