@@ -112,19 +112,7 @@ header p {
 .prato-item p { margin: 0; }
 
 
-/* ESTILOS DE RESTAURAÇÃO DE LAYOUT */
-.content-card {
-    background-color: var(--cor-branco);
-    border-radius: 12px;
-    padding: 30px;
-    margin-bottom: 30px;
-    box-shadow: var(--sombra-card);
-}
-.content-card h1, .content-card h2, .content-card h3 { color: var(--cor-principal); margin-top: 0; }
-h1:not(.hero-text):not(.page-header h1) { border-bottom: 3px solid var(--cor-acento); padding-bottom: 10px; }
-
-
-/* ESTILOS DO RODAPÉ (VERSÃO SIMPLES) */
+/* ESTILOS DO RODAPÉ */
 footer {
     text-align: center;
     padding: 40px 20px;
@@ -146,6 +134,27 @@ footer {
 footer h3 { font-size: 1.5rem; font-weight: 600; color: var(--cor-branco); margin: 0 0 10px 0; }
 footer p { margin-bottom: 0; }
 
+/* ESTILO DO BOTÃO FLUTUANTE (CORRIGIDO) */
+.whatsapp-button { 
+    position: fixed; 
+    bottom: 25px; 
+    right: 25px; 
+    background-color: #25D366; 
+    color: white; 
+    padding: 12px 20px; 
+    border-radius: 30px; 
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2); 
+    z-index: 1001; 
+    text-decoration: none; 
+    font-weight: 600; 
+    font-size: 1rem; 
+    transition: all 0.3s ease; 
+}
+.whatsapp-button:hover { 
+    transform: translateY(-3px); 
+    box-shadow: 0 6px 15px rgba(0,0,0,0.3); 
+}
+
 
 /* Regras de Responsividade */
 @media (max-width: 768px) {
@@ -154,5 +163,4 @@ footer p { margin-bottom: 0; }
     .main-container { margin-top: 25px; padding: 0 15px; }
     .hero-image { height: 30vh; }
     .hero-text { font-size: 2.2rem; }
-    .page-header h1 { font-size: 2.2rem; }
 }
