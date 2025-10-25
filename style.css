@@ -112,7 +112,7 @@ header p {
 .prato-item p { margin: 0; }
 
 
-/* ESTILOS DO RODAPÉ */
+/* ESTILOS DO RODAPÉ (VERSÃO SIMPLES) */
 footer {
     text-align: center;
     padding: 40px 20px;
@@ -122,19 +122,10 @@ footer {
     border-top: 4px solid var(--cor-acento);
 }
 .footer-container { max-width: 800px; margin: 0 auto; }
-.footer-links { margin-top: 15px; margin-bottom: 10px; } 
-.footer-links a { 
-    color: var(--cor-branco);
-    text-decoration: none; 
-    margin: 0 10px; 
-    transition: color 0.3s ease; 
-    font-weight: 500;
-}
-.footer-links a:hover { color: var(--cor-acento); text-decoration: underline; }
 footer h3 { font-size: 1.5rem; font-weight: 600; color: var(--cor-branco); margin: 0 0 10px 0; }
 footer p { margin-bottom: 0; }
 
-/* ESTILO DO BOTÃO FLUTUANTE (CORRIGIDO) */
+/* ESTILO DO BOTÃO FLUTUANTE */
 .whatsapp-button { 
     position: fixed; 
     bottom: 25px; 
@@ -163,4 +154,5 @@ footer p { margin-bottom: 0; }
     .main-container { margin-top: 25px; padding: 0 15px; }
     .hero-image { height: 30vh; }
     .hero-text { font-size: 2.2rem; }
+    .page-header h1 { font-size: 2.2rem; }
 }
