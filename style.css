@@ -1,7 +1,7 @@
 :root {
     --cor-principal: #2d3748;
     --cor-secundaria: #4a5568;
-    --cor-acento: #38b2ac;
+    --cor-acento: #38b2ac; /* Cor unificada verde-azulado */
     --cor-fundo: #f9fafb;
     --cor-branco: #ffffff;
     --sombra-card: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
@@ -19,6 +19,7 @@ body {
     line-height: 1.7;
 }
 
+/* 1. ESTILO DO CABEÇALHO DA PÁGINA INICIAL */
 header {
     background: linear-gradient(rgba(45, 55, 72, 0.7), rgba(45, 55, 72, 0.7)), url('header-portugal.PNG') no-repeat center center;
     background-size: cover;
@@ -30,6 +31,8 @@ header {
 header h1 { margin: 0; font-size: 3rem; font-weight: 700; }
 header p { font-size: 1.2rem; opacity: 0.9; margin-top: 10px; max-width: 600px; margin-left: auto; margin-right: auto; }
 
+
+/* 2. ESTILO DA BARRA DE NAVEGAÇÃO SUPERIOR */
 .navbar {
     background-color: var(--cor-branco);
     padding: 15px 20px;
@@ -41,11 +44,10 @@ header p { font-size: 1.2rem; opacity: 0.9; margin-top: 10px; max-width: 600px; 
     justify-content: space-between;
     align-items: center;
 }
-
 .navbar a.home-link { color: var(--cor-principal); text-decoration: none; font-weight: 700; font-size: 1.2rem; }
 
-.main-container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
 
+/* 3. ESTILO DO CABEÇALHO DAS PÁGINAS DE MENU (SEM IMAGEM) */
 .page-header {
     background-color: var(--cor-principal);
     color: var(--cor-branco);
@@ -62,8 +64,50 @@ header p { font-size: 1.2rem; opacity: 0.9; margin-top: 10px; max-width: 600px; 
 }
 .page-header p { color: rgba(255, 255, 255, 0.9); font-size: 1.1rem; margin-top: 5px; }
 
-.section-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; }
 
+/* 4. ESTILO DO TOPO DAS PÁGINAS FINAIS (COM IMAGEM) */
+.hero-image {
+    height: 40vh;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--cor-branco);
+    text-align: center;
+}
+.hero-text {
+    font-size: 3rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+}
+
+
+/* ESTILOS GERAIS DE CONTEÚDO */
+.main-container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
+
+h1:not(.hero-text):not(.page-header h1) {
+    font-size: 2.5rem;
+    color: var(--cor-principal);
+    margin-bottom: 20px;
+    border-bottom: 3px solid var(--cor-acento);
+    padding-bottom: 10px;
+}
+
+.content-card {
+    background-color: var(--cor-branco);
+    border-radius: 12px;
+    padding: 30px;
+    margin-bottom: 30px;
+    box-shadow: var(--sombra-card);
+}
+
+.content-card h2, .content-card h3 { color: var(--cor-principal); margin-top: 0; }
+
+
+/* 5. ESTILO DOS CARTÕES DA PÁGINA INICIAL */
+.section-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; }
 .section-card {
     background-color: var(--cor-branco);
     border-radius: 12px;
@@ -76,70 +120,49 @@ header p { font-size: 1.2rem; opacity: 0.9; margin-top: 10px; max-width: 600px; 
     display: flex;
     flex-direction: column;
 }
-
-.section-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-    border-bottom-color: var(--cor-acento);
-}
-
+.section-card:hover { transform: translateY(-8px); box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); border-bottom-color: var(--cor-acento); }
 .section-card svg { width: 48px; height: 48px; fill: var(--cor-acento); margin-bottom: 15px; }
-.section-card h2 { font-size: 1.5rem; color: var(--cor-principal); margin: 0 0 10px 0; }
+.section-card h2 { font-size: 1.5rem; margin: 0 0 10px 0; }
 .section-card p { font-size: 0.95rem; margin: 0; flex-grow: 1; }
 
-.content-card {
-    background-color: var(--cor-branco);
-    border-radius: 12px;
-    padding: 30px;
-    margin-bottom: 30px;
-    box-shadow: var(--sombra-card);
-}
 
-.content-card h1, .content-card h2, .content-card h3 { color: var(--cor-principal); margin-top: 0; }
-h1:not(.hero-text):not(.page-header h1) { border-bottom: 3px solid var(--cor-acento); padding-bottom: 10px; }
-
-/* === NOVO LAYOUT PARA O CARTÃO DE TOUR === */
-.tour-card {
-    background-color: #f0fdfa; /* Um verde-azulado muito claro */
-    border-left: 5px solid var(--cor-acento);
-    border-radius: 12px;
-    padding: 25px;
-    margin: 40px 0;
-    display: flex;
-    align-items: center;
-    gap: 25px;
-}
-.tour-card img {
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 12px;
-    flex-shrink: 0;
-}
-.tour-card .tour-info h3 {
-    margin: 0 0 10px 0;
-    font-size: 1.4rem;
-    color: var(--cor-principal);
-}
-.tour-card .tour-info p {
-    margin: 0 0 15px 0;
-}
-.tour-card .tour-info .btn {
-    display: inline-block;
-    background-color: var(--cor-acento);
-    color: var(--cor-branco);
-    padding: 10px 20px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: background-color 0.2s ease;
-}
-.tour-card .tour-info .btn:hover {
-    background-color: #2c8e88;
-}
-/* === FIM DO NOVO LAYOUT === */
+/* 6. ESTILO PARA PÁGINA DE SABORES (IMAGENS CIRCULARES PEQUENAS) */
+.prato-item { display: flex; gap: 25px; align-items: center; margin-bottom: 30px; padding-bottom: 20px; border-bottom: 1px solid #e2e8f0; }
+.prato-item:last-child { border-bottom: none; margin-bottom: 0; }
+.prato-item img { width: 120px; height: 120px; object-fit: cover; border-radius: 50%; flex-shrink: 0; }
+.prato-item h3 { margin: 0 0 5px 0; font-size: 1.4rem; }
+.prato-item p { margin: 0; }
 
 
+/* 7. ESTILO PARA PÁGINA DE PRAIAS, REGIÕES E MONUMENTOS (IMAGENS GRANDES) */
+.local-item { background-color: var(--cor-branco); border-radius: 12px; margin-bottom: 40px; box-shadow: var(--sombra-card); overflow: hidden; transition: all 0.3s ease; }
+.local-item:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+.local-item img { width: 100%; height: 300px; object-fit: cover; display: block; }
+.local-item .local-info { padding: 25px; }
+.local-item h3 { margin: 0 0 10px 0; font-size: 1.6rem; }
+.local-item p { margin: 0; }
+
+
+/* 8. ESTILO PARA PÁGINA DE VINHOS (IMAGENS CIRCULARES MÉDIAS) */
+.vinho-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
+.vinho-card { background-color: var(--cor-branco); border-radius: 12px; box-shadow: var(--sombra-card); transition: all 0.3s ease; padding: 30px 20px; display: flex; flex-direction: column; align-items: center; text-align: center; }
+.vinho-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+.vinho-card img { width: 150px; height: 150px; object-fit: cover; border-radius: 50%; margin-bottom: 20px; }
+.vinho-card .vinho-info { padding: 0; }
+.vinho-card h3 { margin: 0 0 10px 0; font-size: 1.4rem; }
+.vinho-card p { font-size: 0.95rem; margin: 0; }
+
+
+/* 9. ESTILO DO CARTÃO DE TOUR (GETYOURGUIDE) */
+.tour-card { background-color: #f0fdfa; border-left: 5px solid var(--cor-acento); border-radius: 12px; padding: 25px; margin: 40px 0; display: flex; align-items: center; gap: 25px; }
+.tour-card img { width: 150px; height: 150px; object-fit: cover; border-radius: 12px; flex-shrink: 0; }
+.tour-card .tour-info h3 { margin: 0 0 10px 0; font-size: 1.4rem; color: var(--cor-principal); }
+.tour-card .tour-info p { margin: 0 0 15px 0; }
+.tour-card .tour-info .btn { display: inline-block; background-color: var(--cor-acento); color: var(--cor-branco); padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: 600; transition: background-color 0.2s ease; }
+.tour-card .tour-info .btn:hover { background-color: #2c8e88; }
+
+
+/* FOOTER E BOTÃO WHATSAPP */
 footer { text-align: center; padding: 40px 20px; margin-top: 50px; background-color: var(--cor-principal); color: rgba(255, 255, 255, 0.8); border-top: 4px solid var(--cor-acento); }
 .footer-container { max-width: 800px; margin: 0 auto; }
 footer h3 { font-size: 1.5rem; font-weight: 600; color: var(--cor-branco); margin: 0 0 10px 0; }
@@ -149,17 +172,23 @@ footer h3 { font-size: 1.5rem; font-weight: 600; color: var(--cor-branco); margi
 .whatsapp-button { position: fixed; bottom: 25px; right: 25px; background-color: #25D366; color: white; padding: 12px 20px; border-radius: 30px; box-shadow: 0 4px 12px rgba(0,0,0,0.2); z-index: 1001; text-decoration: none; font-weight: 600; font-size: 1rem; transition: all 0.3s ease; }
 .whatsapp-button:hover { transform: translateY(-3px); box-shadow: 0 6px 15px rgba(0,0,0,0.3); }
 
+
+/* REGRAS DE RESPONSIVIDADE PARA TUDO */
 @media (max-width: 768px) {
     header { padding: 60px 15px; }
     header h1 { font-size: 2.5rem; }
     .main-container { margin-top: 25px; padding: 0 15px; }
     .content-card { padding: 20px; }
     .whatsapp-button { padding: 10px 15px; font-size: 0.9rem; }
+    
     .page-header h1 { font-size: 2.2rem; }
+    .hero-image { height: 30vh; }
+    .hero-text { font-size: 2.2rem; }
 
-    /* Responsividade para o cartão de tour */
-    .tour-card {
-        flex-direction: column;
-        text-align: center;
-    }
+    .prato-item { flex-direction: column; align-items: center; text-align: center; }
+    .prato-item img { width: 120px; height: 120px; }
+
+    .local-item img { height: 250px; }
+    
+    .tour-card { flex-direction: column; text-align: center; }
 }
